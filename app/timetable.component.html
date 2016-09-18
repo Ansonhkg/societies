@@ -1,0 +1,19 @@
+<h1>{{title}}</h1>
+
+<ul class="societies">
+
+<div *ngFor="let day of [0,1,2,3,4,5,6]; let i = index">
+    
+    <h2 *ngIf="timetable[day].length > 0">{{i | day}}<hr></h2>
+    
+    <div *ngFor="let society of timetable[day]">
+        
+        <h3>{{society.name}}</h3>
+        <li>{{society.start}} - {{society.end}}</li>
+        <li>{{society.location}}</li>
+    </div>
+
+</div>
+
+
+</ul>

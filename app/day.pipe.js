@@ -9,22 +9,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var http_1 = require('@angular/http');
-var app_component_1 = require('./app.component');
-var day_pipe_1 = require('./day.pipe');
-var AppModule = (function () {
-    function AppModule() {
+var DayPipe = (function () {
+    function DayPipe() {
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, http_1.HttpModule],
-            declarations: [app_component_1.AppComponent, day_pipe_1.DayPipe],
-            bootstrap: [app_component_1.AppComponent]
-        }), 
+    DayPipe.prototype.transform = function (value, args) {
+        // if(!value) return value;
+        if (value === 0)
+            return "Sunday";
+        if (value === 1)
+            return "Monday";
+        if (value === 2)
+            return "Tuesday";
+        if (value === 3)
+            return "Wednesday";
+        if (value === 4)
+            return "Thursday";
+        if (value === 5)
+            return "Friday";
+        if (value === 6)
+            return "Saturday";
+    };
+    DayPipe = __decorate([
+        core_1.Pipe({ name: 'day' }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], DayPipe);
+    return DayPipe;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.DayPipe = DayPipe;
+//# sourceMappingURL=day.pipe.js.map
