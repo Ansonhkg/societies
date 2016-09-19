@@ -1,19 +1,23 @@
 <h1>{{title}}</h1>
 
-<ul class="societies">
+<div *ngFor="let day of [0,1,2,3,4,5,6]; let i = index" class="timetable-column">
+    
+    <h2 *ngIf="timetable[day].length > 0" class="timetable-column-title">{{i | day}}<hr></h2>
+    
+    <ul *ngFor="let society of timetable[day]" class="timetable-column-events">
 
-<div *ngFor="let day of [0,1,2,3,4,5,6]; let i = index">
-    
-    <h2 *ngIf="timetable[day].length > 0">{{i | day}}<hr></h2>
-    
-    <div *ngFor="let society of timetable[day]">
-        
-        <h3>{{society.name}}</h3>
-        <li>{{society.start}} - {{society.end}}</li>
-        <li>{{society.location}}</li>
-    </div>
+        <li class="society">
+            <div class="society-image"><img src="{{society.img}}"/></div>
+            <div class="society-text">
+                <div class="society-name">{{society.name}}</div>
+                <div class="society-location">{{society.location}}</div>
+            </div>
+            <div class="society-time">
+                <div class="society-time-start">{{society.start}}</div>
+                <div class="society-time-end">{{society.end}}</div>
+            </div>
+        </li>
+
+    </ul>
 
 </div>
-
-
-</ul>

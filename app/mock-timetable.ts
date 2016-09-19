@@ -1,12 +1,12 @@
 import { Slot } from './slot';
 import { Day } from './slot';
 
-export const TIMETABLE: Day[] = {
+export const TIMETABLE = {
     0:[
         {
             id: 8162,
             name: "Aikido",
-            img: "ttps://s3-eu-west-1.amazonaws.com/nusdigital/group/images/8162/medium/aikido-at-lancaster-university.png",
+            img: "https://s3-eu-west-1.amazonaws.com/nusdigital/group/images/8162/medium/aikido-at-lancaster-university.png",
             start: "12:00",
             end: "14:00",
             location: "George Fox"
@@ -62,7 +62,7 @@ export const TIMETABLE: Day[] = {
         {
             id: 8162,
             name: "Aikido",
-            img: "ttps://s3-eu-west-1.amazonaws.com/nusdigital/group/images/8162/medium/aikido-at-lancaster-university.png",
+            img: "https://s3-eu-west-1.amazonaws.com/nusdigital/group/images/8162/medium/aikido-at-lancaster-university.png",
             start: "20:00",
             end: "22:00",
             location: "George Fox"
@@ -80,7 +80,7 @@ export const TIMETABLE: Day[] = {
         {
             id: 8162,
             name: "Aikido",
-            img: "ttps://s3-eu-west-1.amazonaws.com/nusdigital/group/images/8162/medium/aikido-at-lancaster-university.png",
+            img: "https://s3-eu-west-1.amazonaws.com/nusdigital/group/images/8162/medium/aikido-at-lancaster-university.png",
             start: "16:00",
             end: "18:00",
             location: "County Main"

@@ -11,7 +11,7 @@ import { TIMETABLE } from './mock-timetable';
 
 export class AppComponent{
 
-    title = 'Societies Timetable';
+    title = 'Lancaster University Societies Timetable';
     timetable = TIMETABLE;
     
 }

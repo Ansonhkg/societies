@@ -12,7 +12,7 @@ var core_1 = require('@angular/core');
 var mock_timetable_1 = require('./mock-timetable');
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = 'Societies Timetable';
+        this.title = 'Lancaster University Societies Timetable';
         this.timetable = mock_timetable_1.TIMETABLE;
     }
     AppComponent = __decorate([
